@@ -1,11 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
-
   render() {
     const meta = {
       title: "zwwuu | dev",
@@ -30,12 +25,13 @@ class MyDocument extends Document {
         <body>
           <noscript>
             <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${process.env.GOOGLE_TAG_MANAGER_ID}`}
+              src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}`}
               height="0"
               width="0"
               style={{ display: "none", visibility: "hidden" }}
             />
           </noscript>
+          <noscript>You need to enable JavaScript to run this app.</noscript>
           <Main />
           <NextScript />
         </body>

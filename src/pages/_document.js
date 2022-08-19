@@ -1,34 +1,27 @@
-import Document, { Head, Html, Main, NextScript } from "next/document";
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-class MyDocument extends Document {
+export default class MyDocument extends Document {
   render() {
-    const meta = {
-      title: "zwwuu | dev",
-      description: "I'm passionate about working on open source products & building thriving communities around them.",
-      image: "https://zwwuu.dev/assets/logo.png",
-    };
-
     return (
-      <Html lang="en" className="scroll-smooth bg-black text-white">
+      <Html lang="en" className="scroll-smooth">
         <Head>
+          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#bebebe" />
+          <meta name="msapplication-TileColor" content="#bebebe" />
+          <meta name="theme-color" content="#bebebe" />
           <meta name="robots" content="follow, index" />
-          <meta name="description" content={meta.description} />
-          <meta property="og:site_name" content={meta.title} />
-          <meta property="og:description" content={meta.description} />
-          <meta property="og:title" content={meta.title} />
-          <meta property="og:image" content={meta.image} />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={meta.title} />
-          <meta name="twitter:description" content={meta.description} />
-          <meta name="twitter:image" content={meta.image} />
         </Head>
-        <body>
+        <body className={'bg-white text-black text-base'}>
           <noscript>
             <iframe
               src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}`}
               height="0"
               width="0"
-              style={{ display: "none", visibility: "hidden" }}
+              style={{ display: 'none', visibility: 'hidden' }}
             />
           </noscript>
           <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +32,3 @@ class MyDocument extends Document {
     );
   }
 }
-
-export default MyDocument;

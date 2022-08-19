@@ -1,0 +1,11 @@
+.root {
+  @apply inline-flex items-center justify-center rounded-lg bg-accent shadow;
+}
+
+.icon {
+  @apply flex h-full items-center border-r-2 p-2;
+}
+
+.text {
+  @apply py-2 px-3 font-mono font-semibold text-xs;
+}

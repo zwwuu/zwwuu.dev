@@ -2,7 +2,6 @@
   "name": "wuuzw",
   "private": true,
   "scripts": {
-    "analyze": "cross-env ANALYZE=true npm run build",
     "build": "next build",
     "dev": "next dev",
     "format": "prettier \"./src/**/*.{js,jsx,ts,tsx,css,md,mdx}\" -w",
@@ -11,39 +10,34 @@
     "start": "next start"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,css,md,mdx}": "prettier --write",
-    "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
+    "*.{css,md,mdx}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "dependencies": {
-    "@fontsource/poppins": "^4.5.5",
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.18",
-    "@tailwindcss/forms": "^0.5.0",
-    "cross-env": "^7.0.3",
-    "gray-matter": "^4.0.3",
-    "next": "^12.1.4",
-    "next-seo": "^5.4.0",
-    "postcss": "^8.4.12",
+    "@fontsource/poppins": "^4.5.10",
+    "@tabler/icons": "^1.113.0",
+    "@tailwindcss/forms": "^0.5.3",
+    "clsx": "^1.2.1",
+    "framer-motion": "^7.6.12",
+    "next": "^13.0.5",
+    "postcss": "^8.4.19",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-preset-env": "^7.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-hook-form": "^7.29.0",
-    "react-icon-cloud": "^4.0.1",
-    "simple-icons": "^6.17.0",
-    "tailwindcss": "^3.0.23"
+    "postcss-preset-env": "^7.8.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.4",
+    "tailwindcss-fluid-type": "^2.0.3"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^12.1.4",
-    "eslint": "^8.12.0",
-    "eslint-config-next": "^12.1.4",
+    "eslint": "^8.28.0",
+    "eslint-config-next": "^13.0.5",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.3.7",
-    "prettier": "^2.6.2",
-    "prettier-plugin-tailwindcss": "^0.1.8"
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.8.0",
+    "prettier-plugin-tailwindcss": "^0.1.13"
   }
 }

@@ -1,0 +1,7 @@
+.root {
+  @apply bg-primary;
+}
+
+.title {
+  @apply text-center text-slate-600 text-sm;
+}

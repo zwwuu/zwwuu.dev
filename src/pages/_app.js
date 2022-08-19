@@ -1,35 +1,50 @@
-import "@fontsource/poppins/400.css";
-import "@fontsource/poppins/500.css";
-import "@fontsource/poppins/600.css";
-import "@fontsource/poppins/700.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { useRouter } from "next/router";
-import Script from "next/script";
-import { useEffect } from "react";
-import "../styles/globals.css";
-
-config.autoAddCss = false;
+import '@fontsource/poppins';
+import { useRouter } from 'next/router';
+import Script from 'next/script';
+import { useEffect } from 'react';
+import '../styles/globals.css';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   const pageview = (url) => {
     window.dataLayer.push({
-      event: "pageview",
+      event: 'pageview',
       page: url,
     });
   };
 
   useEffect(() => {
-    router.events.on("routeChangeComplete", pageview);
+    router.events.on('routeChangeComplete', pageview);
     return () => {
-      router.events.off("routeChangeComplete", pageview);
+      router.events.off('routeChangeComplete', pageview);
     };
   }, [router.events]);
 
+  const meta = {
+    title: 'zwwuu | Developer',
+    description: "I'm passionate about working on open source products & building thriving communities around them.",
+    image: 'https://zwwuu.dev/images/logo.png',
+    url: 'https://zwwuu.dev',
+  };
+
   return (
     <>
+      <Head>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+        <meta property="og:site_name" content={meta.title} />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:image" content={meta.image} />
+        <meta property="og:url" content={`${meta.url}${router.pathname}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.image} />
+      </Head>
       <Script
         id="gtag"
         strategy="afterInteractive"

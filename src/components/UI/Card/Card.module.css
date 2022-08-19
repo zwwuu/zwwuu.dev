@@ -1,0 +1,19 @@
+.root {
+  @apply flex h-full flex-col rounded border shadow-md transition-all will-change-transform;
+}
+
+.root:hover {
+  @apply -translate-y-1 shadow-lg;
+}
+
+.header {
+  @apply px-4 pt-4;
+}
+
+.body {
+  @apply flex-grow p-4;
+}
+
+.footer {
+  @apply border-t p-4;
+}

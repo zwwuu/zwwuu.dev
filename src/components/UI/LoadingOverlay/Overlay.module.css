@@ -1,0 +1,11 @@
+.root {
+  @apply absolute inset-0 z-10 flex items-center justify-center rounded;
+}
+
+.overlay {
+  @apply absolute inset-0 z-10 bg-slate-50 opacity-90;
+}
+
+.inner {
+  @apply z-20;
+}

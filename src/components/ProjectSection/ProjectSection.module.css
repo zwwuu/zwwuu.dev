@@ -1,0 +1,30 @@
+.root {
+  @apply bg-white;
+}
+
+.title {
+  @apply mb-6 font-bold uppercase text-3xl;
+}
+
+.projectGrid {
+  @apply grid gap-8 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.icon {
+  @apply float-right;
+}
+
+.projectTitle {
+  @apply font-medium text-lg;
+}
+
+.projectSubtitle {
+  @apply italic underline decoration-dotted text-xs;
+}
+
+.link {
+  @apply relative block text-sm
+    after:absolute after:-left-[1ch] after:-right-[1ch] after:bottom-0 after:block after:h-0.5 after:bg-secondary after:transition-all
+    hover:after:h-1/3 hover:after:rounded-t-sm hover:after:opacity-25
+    focus:after:h-1/3 focus:after:rounded-t-sm focus:after:opacity-25;
+}

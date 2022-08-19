@@ -1,0 +1,15 @@
+.root {
+  @apply grid grid-cols-3;
+}
+
+.box {
+  @apply rounded p-6 transition-all hover:shadow-inner;
+}
+
+.box:hover .title {
+  @apply underline;
+}
+
+.title {
+  @apply font-mono text-sm;
+}

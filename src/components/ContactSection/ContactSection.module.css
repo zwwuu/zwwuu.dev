@@ -1,0 +1,23 @@
+.root {
+  @apply bg-gradient-to-b from-white to-primary;
+}
+
+.title {
+  @apply mb-6 font-bold uppercase text-3xl;
+}
+
+.contactGrid {
+  @apply flex flex-col justify-between gap-y-8 gap-x-16 md:flex-row;
+}
+
+.left {
+  @apply basis-8/12;
+}
+
+.right {
+  @apply basis-4/12;
+}
+
+.link {
+  @apply transition-opacity hover:opacity-80 focus:opacity-80;
+}

@@ -3,7 +3,7 @@
 }
 
 .root:hover {
-  @apply -translate-y-1 shadow-lg;
+//  @apply shadow-lg;
 }
 
 .header {

@@ -6,6 +6,8 @@ export default function Card({ header, body, footer, className }) {
   return (
     <motion.div whileTap={{ y: 1 }}
     whileHover={{ y: 1 }}
+      initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
     className={cn(styles.root, className)}>
       <div className={styles.header}>{header}</div>
       <div className={styles.body}>{body}</div>

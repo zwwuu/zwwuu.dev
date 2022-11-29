@@ -5,14 +5,26 @@ import Stack from '../UI/Stack';
 import styles from './ContactSection.module.css';
 import Group from '../UI/Group';
 import ContactForm from '../ContactForm';
+import { motion } from 'framer-motion';
 
 export default function ContactSection() {
+  const variants = {
+    hidden: { y: '100%', opacity: 0 },
+    show: { y: 0, opacity: 1 },
+  };
+
   return (
     <Section id={'contact'} className={styles.root}>
       <Container>
         <Stack>
           <h2 className={styles.title}>Get in touch</h2>
-          <div className={styles.contactGrid}>
+          <motion.div
+            className={styles.contactGrid}
+            variants={variants}
+            initial={'hidden'}
+            whileInView={'show'}
+            viewport={{ once: true }}
+          >
             <div className={styles.left}>
               <ContactForm />
             </div>
@@ -47,7 +59,7 @@ export default function ContactSection() {
                 </a>
               </Group>
             </div>
-          </div>
+          </motion.div>
         </Stack>
       </Container>
     </Section>

@@ -1,25 +1,15 @@
 .root {
-  @apply flex min-h-screen flex-col items-center justify-center bg-primary text-center text-black;
+  @apply items-center bg-primary text-center;
+}
+
+.container {
+  @apply mt-auto;
 }
 
 .title {
-  @apply mb-8 inline-flex flex-col font-bold tracking-wider text-7xl
-    before:animate-tilt-in-br before:self-start before:font-mono before:tracking-normal before:opacity-60 before:content-['<h1>'] before:text-xs
-    after:animate-tilt-in-tl after:self-end after:font-mono after:tracking-normal after:opacity-60 after:content-['</h1>'] after:text-xs;
+  @apply relative inline-block font-bold tracking-wider text-7xl;
 }
 
 .name {
   @apply underline decoration-dotted underline-offset-1 after:ml-px after:animate-blink after:content-["|"];
-}
-
-.hint {
-  @apply flex animate-slide-in-blurred-top cursor-default items-center justify-center font-bold uppercase text-xs;
-}
-
-.hint > * {
-  @apply p-2 transition-transform hover:-translate-y-3;
-}
-
-.icon {
-  @apply block animate-bounce;
 }

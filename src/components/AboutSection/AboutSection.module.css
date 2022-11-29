@@ -14,13 +14,16 @@
   @apply flex-grow;
 }
 
-.title {
+.heading {
   @apply mb-12 font-semibold text-3xl;
 }
 
+.title {
+  @apply relative mt-4 block text-2xl;
+}
+
 .indicator {
-  @apply relative mt-4 block w-full animate-bounce cursor-pointer
-    before:absolute before:top-1 before:-left-1 before:block before:h-2.5 before:w-2.5 before:animate-ping before:rounded-full before:bg-accent;
+  @apply absolute top-1 -left-1 block h-2.5 w-2.5 rounded-full bg-accent;
 }
 
 .subtitle {

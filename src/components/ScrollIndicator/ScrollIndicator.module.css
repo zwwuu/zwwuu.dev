@@ -1,0 +1,7 @@
+.text {
+  @apply flex cursor-default font-bold uppercase text-xs;
+}
+
+.text > * {
+  @apply p-2;
+}

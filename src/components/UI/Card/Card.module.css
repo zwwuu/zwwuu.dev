@@ -1,5 +1,5 @@
 .root {
-  @apply flex h-full flex-col rounded border shadow-md transition-all will-change-transform;
+  @apply flex h-full flex-col rounded border shadow-md;
 }
 
 .header {

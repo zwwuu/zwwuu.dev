@@ -1,22 +1,13 @@
-import { useEffect, useState } from 'react';
 import Section from '../UI/Section';
 import Container from '../UI/Container';
 import styles from './AboutSection.module.css';
 import Stack from '../UI/Stack';
 import SkillBoxes from '../SkillBoxes';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function AboutSection() {
-  const titles = [
-    'Web Developer',
-    'Gamer',
-    'Software Engineer',
-    'New Yorker',
-    'Coder',
-    'Crypto Enthusiast',
-    'Freelancer',
-    'Techie',
-    'Geek',
-  ];
+  const titles = ['Web Developer', 'Gamer', 'Software Engineer', 'New Yorker', 'Coder', 'Freelancer', 'Techie'];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -32,17 +23,28 @@ export default function AboutSection() {
         <div className={styles.aboutGrid}>
           <div className={styles.left}>
             <Stack>
-              <h2 className={styles.title}>
+              <h2 className={styles.heading}>
                 {"I'm A "}
-                <span
-                  key={index}
-                  className={styles.indicator}
-                  onClick={() => {
-                    setIndex((prev) => (prev + 1) % titles.length);
-                  }}
-                >
-                  {titles[index]}.
-                </span>
+                <AnimatePresence>
+                  <>
+                    <motion.span
+                      key={index}
+                      initial={{ opacity: 0, y: -100 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 100 }}
+                      className={styles.title}
+                    >
+                      <motion.span
+                        className={styles.indicator}
+                        animate={{ opacity: [1, 0.25, 1], scale: [1, 1.5, 1] }}
+                        transition={{
+                          repeat: Infinity,
+                        }}
+                      />
+                      {titles[index]}.
+                    </motion.span>
+                  </>
+                </AnimatePresence>
               </h2>
               <p className={styles.subtitle}>
                 {'Hello, my name is '}

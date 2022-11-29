@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
-import { IconArrowBigDownLines } from '@tabler/icons';
 import styles from './HeroSection.module.css';
 import Container from '../UI/Container';
 import Section from '../UI/Section';
 import Stack from '../UI/Stack';
+import ScrollIndicator from '../ScrollIndicator';
+import { motion } from 'framer-motion';
 
 export default function HeroSection() {
   const words = useMemo(
@@ -40,30 +41,32 @@ export default function HeroSection() {
     return () => clearTimeout(timeout);
   }, [subIndex, index, reverse, words]);
 
+  const variants = {
+    hidden: { y: '100%', opacity: 0 },
+    show: { y: 0, opacity: 1 },
+  };
+
   return (
     <Section id={'hero'} className={styles.root}>
-      <Container className={'mt-auto'}>
-        <h1 className={styles.title}> Hello; </h1>
-        <p>
-          {'Welcome to my site, '}
-          <span className={styles.name}>{words[index].substring(0, subIndex)}</span>
-        </p>
-      </Container>
-      <Container className={'mt-auto'}>
-        <Stack align={'items-center'}>
-          <div className={styles.hint}>
-            <span>s</span>
-            <span>c</span>
-            <span>r</span>
-            <span>o</span>
-            <span>o</span>
-            <span>l</span>
-            <span>l</span>
-          </div>
-          <a href={'#about'} className={styles.icon}>
-            <IconArrowBigDownLines />
-          </a>
+      <Container className={styles.container}>
+        <Stack spacing={'space-y-8'}>
+          <motion.h1
+            className={styles.title}
+            variants={variants}
+            initial={'hidden'}
+            whileInView={'show'}
+            viewport={{ once: true }}
+          >
+            Hello;
+          </motion.h1>
+          <motion.p variants={variants} initial={'hidden'} whileInView={'show'} viewport={{ once: true }}>
+            {'Welcome to my site, '}
+            <span className={styles.name}>{words[index].substring(0, subIndex)}</span>
+          </motion.p>
         </Stack>
+      </Container>
+      <Container className={styles.container}>
+        <ScrollIndicator />
       </Container>
     </Section>
   );

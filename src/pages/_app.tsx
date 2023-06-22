@@ -1,7 +1,8 @@
 import "~/styles/globals.css";
+
 import { AppProps, NextWebVitalsMetric } from "next/app";
 import { DefaultSeo } from "next-seo";
-import { GoogleAnalytics, event } from "nextjs-google-analytics";
+import { event, GoogleAnalytics } from "nextjs-google-analytics";
 
 import seo from "~/lib/seo";
 

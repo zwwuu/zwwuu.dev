@@ -5,16 +5,55 @@ import ouiLarge from "../../public/images/1upinfinite/1.png";
 import ouiSmall from "../../public/images/1upinfinite/2.png";
 import bsLarge from "../../public/images/buildsomething/1.png";
 import bsSmall from "../../public/images/buildsomething/2.png";
+import ecomLarge from "../../public/images/ecom/1.png";
+import ecomSmall from "../../public/images/ecom/2.png";
 import ghsLarge from "../../public/images/ghstats/1.png";
 import ghsSmall from "../../public/images/ghstats/2.png";
-import mLarge from "../../public/images/meteo/1.png";
-import mSmall from "../../public/images/meteo/2.png";
 import slLarge from "../../public/images/shortl/1.png";
 import slSmall from "../../public/images/shortl/2.png";
+import tSmall from "../../public/images/tools/1.png";
+import tLarge from "../../public/images/tools/2.png";
 import zLarge from "../../public/images/zone/1.png";
 import zSmall from "../../public/images/zone/2.png";
 
 const projects: IProject[] = [
+  {
+    name: "E-commerce Store",
+    type: "web",
+    icon: <IconLink />,
+    url: "https://tangerine-moose-ecommerce.vercel.app/",
+    tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
+    description:
+      "An fictional online storefront featuring a wide range of coffees, teas and equipment which can be filtered by tags, or sorted by price and name.",
+    images: {
+      large: {
+        src: ecomSmall,
+        alt: "homepage",
+      },
+      small: {
+        src: ecomLarge,
+        alt: "Product mobile homepage",
+      },
+    },
+  },
+  {
+    name: "Tools",
+    type: "web",
+    icon: <IconLink />,
+    url: "https://tools.zwwuu.dev",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    description: "Collection of useful tools for developers.",
+    images: {
+      large: {
+        src: tLarge,
+        alt: "Tools homepage",
+      },
+      small: {
+        src: tSmall,
+        alt: "Tools mobile homepage",
+      },
+    },
+  },
   {
     name: "1UpInfinite",
     type: "web",
@@ -105,25 +144,6 @@ const projects: IProject[] = [
       small: {
         src: zSmall,
         alt: "zone homepage",
-      },
-    },
-  },
-  {
-    name: "Meteo",
-    type: "web",
-    icon: <IconLink />,
-    url: "https://meteo.zwwuu.dev",
-    repo: "https://github.com/zwwuu/meteo",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    description: "Weather app that uses OpenWeatherMap API.",
-    images: {
-      large: {
-        src: mLarge,
-        alt: "Meteo homepage",
-      },
-      small: {
-        src: mSmall,
-        alt: "Meteo mobile homepage",
       },
     },
   },

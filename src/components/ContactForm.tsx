@@ -1,4 +1,4 @@
-import { ValidationError, useForm } from "@formspree/react";
+import { useForm, ValidationError } from "@formspree/react";
 import { IconArrowNarrowLeft, IconCheck, IconCircleDotted } from "@tabler/icons-react";
 
 import Button from "./Button";

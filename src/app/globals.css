@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "fluid-tailwindcss";
+
+@theme inline {
+  --color-white: #fffefa;
+  --color-black: #040404;
+  --color-primary: #ed8a63;
+}

@@ -1,5 +1,5 @@
 import {
-  SiCss3,
+  SiCss,
   SiDart,
   SiElectron,
   SiExpress,
@@ -21,30 +21,27 @@ import {
   SiWordpress,
 } from "@icons-pack/react-simple-icons";
 
-import ITechnology from "~/types/ITechnology";
-
-const technologies: ITechnology[] = [
-  { name: "HTML", icon: <SiHtml5 title={"HTML 5"} /> },
-  { name: "CSS", icon: <SiCss3 title={"CSS 3"} /> },
-  { name: "JavaScript", icon: <SiJavascript title={"JavaScript"} /> },
-  { name: "React", icon: <SiReact title={"React"} /> },
-  { name: "Vue.js", icon: <SiVuedotjs title={"Vue.js"} /> },
-  { name: "Flutter", icon: <SiFlutter title={"Flutter"} /> },
-  { name: "Electron", icon: <SiElectron title={"Electron"} /> },
-  { name: "Next.js", icon: <SiNextdotjs title={"Next.js"} /> },
-  { name: "WordPress", icon: <SiWordpress title={"WordPress"} /> },
-  { name: "Express", icon: <SiExpress title={"Express"} /> },
-  { name: "Node.js", icon: <SiNodedotjs title={"Node.js"} /> },
-  { name: "TypeScript", icon: <SiTypescript title={"TypeScript"} /> },
-  { name: "PHP", icon: <SiPhp title={"PHP"} /> },
-  { name: "Dart", icon: <SiDart title={"Dart"} /> },
-  { name: "MySQL", icon: <SiMysql title={"MySQL"} /> },
-  { name: "PostgreSQL", icon: <SiPostgresql title={"PostgreSQL"} /> },
-  { name: "MongoDB", icon: <SiMongodb title={"MongoDB"} /> },
-  { name: "Prisma", icon: <SiPrisma title={"Prisma"} /> },
-
-  { name: "Git", icon: <SiGit title={"Git"} /> },
-  { name: "Subversion", icon: <SiSubversion title={"Subversion"} /> },
+const technologies = [
+  { name: "HTML", icon: <SiHtml5 /> },
+  { name: "CSS", icon: <SiCss /> },
+  { name: "JavaScript", icon: <SiJavascript /> },
+  { name: "React", icon: <SiReact /> },
+  { name: "Vue.js", icon: <SiVuedotjs /> },
+  { name: "Flutter", icon: <SiFlutter /> },
+  { name: "Electron", icon: <SiElectron /> },
+  { name: "Next.js", icon: <SiNextdotjs /> },
+  { name: "WordPress", icon: <SiWordpress /> },
+  { name: "Express", icon: <SiExpress /> },
+  { name: "Node.js", icon: <SiNodedotjs /> },
+  { name: "TypeScript", icon: <SiTypescript /> },
+  { name: "PHP", icon: <SiPhp /> },
+  { name: "Dart", icon: <SiDart /> },
+  { name: "MySQL", icon: <SiMysql /> },
+  { name: "PostgreSQL", icon: <SiPostgresql /> },
+  { name: "MongoDB", icon: <SiMongodb /> },
+  { name: "Prisma", icon: <SiPrisma /> },
+  { name: "Git", icon: <SiGit /> },
+  { name: "Subversion", icon: <SiSubversion /> },
 ];
 
 export default technologies;

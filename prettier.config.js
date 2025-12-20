@@ -10,15 +10,16 @@ module.exports = {
   semi: true,
   trailingComma: "all",
   tabWidth: 2,
+  tailwindStylesheet: "./src/app/globals.css",
   plugins: ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
   importOrder: [
     "^(react/(.*)$)|^(react$)|^(react-native(.*)$)",
     "^(next/(.*)$)|^(next$)",
     "<THIRD_PARTY_MODULES>",
     "",
-    "^~/(.*)$",
+    "^@/(.*)$",
     "^[./]",
   ],
   importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
-  importOrderTypeScriptVersion: "5.1.3",
+  importOrderTypeScriptVersion: "5.9.3",
 };

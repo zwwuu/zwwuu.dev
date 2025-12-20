@@ -1,6 +1,7 @@
+import { ReactNode } from "react";
+import { StaticImageData } from "next/image";
 import { IconBrandAndroid, IconLink } from "@tabler/icons-react";
 
-import IProject from "~/types/IProject";
 import ouiLarge from "../../public/images/1upinfinite/1.png";
 import ouiSmall from "../../public/images/1upinfinite/2.png";
 import bsLarge from "../../public/images/buildsomething/1.png";
@@ -16,7 +17,21 @@ import tLarge from "../../public/images/tools/2.png";
 import zLarge from "../../public/images/zone/1.png";
 import zSmall from "../../public/images/zone/2.png";
 
-const projects: IProject[] = [
+export interface Project {
+  name: string;
+  description: string;
+  type: string;
+  url: string;
+  repo?: string;
+  images: {
+    small?: { src: StaticImageData; alt: string };
+    large: { src: StaticImageData; alt: string };
+  };
+  icon: ReactNode;
+  tags: string[];
+}
+
+const projects: Project[] = [
   {
     name: "E-commerce Store",
     type: "web",
